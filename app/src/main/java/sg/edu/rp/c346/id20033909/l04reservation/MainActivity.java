@@ -40,15 +40,17 @@ public class MainActivity extends AppCompatActivity {
         confirm.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                if (name.getText().equals("")){
-                    Toast.makeText(MainActivity.this,"Button Click",Toast.LENGTH_LONG).show();
+                String message = "";
+                if (name.getText().toString().trim().length()==0){
+                    message += "Please provide a Name";
+                } else if (mobile.getText().toString().trim().length()==0) {
+                    message += "Please provide a Mobile Number";
+                } else if (size.getText().toString().trim().length()==0){
+                    message += "Please provide Group Size";
+                } else if (){
+
                 }
-
-
-
-
-
-
+                Toast.makeText(MainActivity.this,message,Toast.LENGTH_LONG).show();
 
 
             }

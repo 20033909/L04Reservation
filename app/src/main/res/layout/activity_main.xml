@@ -17,7 +17,7 @@
             android:orientation="vertical">
 
             <EditText
-                android:id="@+id/editTextText"
+                android:id="@+id/name"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:ems="10"
@@ -25,7 +25,7 @@
                 android:inputType="text" />
 
             <EditText
-                android:id="@+id/editTextPhone"
+                android:id="@+id/mobile"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:ems="10"
@@ -33,7 +33,7 @@
                 android:inputType="phone" />
 
             <EditText
-                android:id="@+id/editTextNumber"
+                android:id="@+id/size"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:ems="10"
@@ -71,6 +71,7 @@
                     android:id="@+id/smoking"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
+                    android:checked="false"
                     android:text="@string/smoking" />
 
                 <RadioButton

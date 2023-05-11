@@ -27,10 +27,26 @@ public class MainActivity extends AppCompatActivity {
 
 
         name = findViewById(R.id.name);
+        mobile = findViewById(R.id.mobile);
+        size = findViewById(R.id.size);
         dp = findViewById(R.id.datePicker);
         tp = findViewById(R.id.timePicker);
         confirm = findViewById(R.id.confirm);
         reset = findViewById(R.id.reset);
+
+        confirm.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Toast.makeText(MainActivity.this,"Button Click",Toast.LENGTH_LONG).show();
+
+
+
+
+
+
+
+            }
+        });
 
 
     }

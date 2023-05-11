@@ -17,10 +17,12 @@
             android:orientation="vertical">
 
             <TextView
-                android:id="@+id/textView2"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="TextView" />
+                android:elegantTextHeight="true"
+                android:fontFamily="sans-serif-black"
+                android:text="@string/title"
+                android:textAlignment="center" />
 
             <TextView
                 android:id="@+id/textView"
@@ -112,7 +114,15 @@
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
                     android:text="@string/reset" />
+
             </LinearLayout>
+
+            <TextView
+                android:id="@+id/display"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:singleLine="false" />
 
         </LinearLayout>
     </ScrollView>

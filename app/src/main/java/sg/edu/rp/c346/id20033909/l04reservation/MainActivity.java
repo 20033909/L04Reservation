@@ -8,6 +8,7 @@ import android.widget.Button;
 import android.widget.DatePicker;
 import android.widget.EditText;
 import android.widget.RadioGroup;
+import android.widget.TextView;
 import android.widget.TimePicker;
 import android.widget.Toast;
 
@@ -20,6 +21,7 @@ public class MainActivity extends AppCompatActivity {
     RadioGroup radio;
     Button confirm;
     Button reset;
+    TextView display;
 
 
     @Override
@@ -36,11 +38,20 @@ public class MainActivity extends AppCompatActivity {
         confirm = findViewById(R.id.confirm);
         reset = findViewById(R.id.reset);
         radio = findViewById(R.id.radio);
+        display = findViewById(R.id.display);
 
         confirm.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 String message = "";
+                String displayTxt = "";
+                int hour = tp.getHour();
+                int min = tp.getMinute();
+                int year = dp.getYear();
+                int month = dp.getMonth() + 1;
+                int day = dp.getDayOfMonth();
+
+
                 if (name.getText().toString().trim().length()==0){
                     message += "Please provide a Name";
                 } else if (mobile.getText().toString().trim().length()==0) {
@@ -48,6 +59,8 @@ public class MainActivity extends AppCompatActivity {
                 } else if (size.getText().toString().trim().length()==0){
                     message += "Please provide Group Size";
                 } else if (){
+                    message += "Reservation Confirmed!";
+                    displayTxt += "Name: " + name + "\nMobile: "+mobile+"\nGroup Size: "+size+"\nBooking Date: "+date+"\nTime Booked: "+hour+":"+min+"\nSmoking Area: "+boolSmoking+"\n\nPlease be Punctual!";
 
                 }
                 Toast.makeText(MainActivity.this,message,Toast.LENGTH_LONG).show();
@@ -55,20 +68,21 @@ public class MainActivity extends AppCompatActivity {
 
             }
         });
-
-        confirm.setOnClickListener(new View.OnClickListener() {
+        reset.setOnClickListener(new View.OnClickListener() {
             @Override
-            public void onClick(View v) {
-                Toast.makeText(MainActivity.this,"Button Click",Toast.LENGTH_LONG).show();
-
-
-
-
-
-
-
+            public void onClick(View view) {
+                dp.updateDate(2023,6,1);
+                tp.setHour(19);
+                tp.setMinute(30);
+                name.setText("");
+                mobile.setText("");
+                size.setText("");
+                rbNonsmoke.setChecked(true);
+                display.setText("");
             }
         });
+
+
 
 
     }

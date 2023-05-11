@@ -1,0 +1,8 @@
+<resources>
+    <string name="app_name">L04 Reservation</string>
+    <string name="confirm">CONFIRM</string>
+    <string name="reset">RESET</string>
+    <string name="smokingCheck">Any smokers?</string>
+    <string name="nonSmoking">No</string>
+    <string name="smoking">Yes</string>
+</resources>

@@ -3,7 +3,6 @@
     <string name="title">Reservation APP</string>
     <string name="confirm">CONFIRM</string>
     <string name="reset">RESET</string>
-    <string name="smokingCheck">Any smokers?</string>
-    <string name="nonSmoking">No</string>
-    <string name="smoking">Yes</string>
+    <string name="smokingCheck">Smoking Area Preferred</string>
+
 </resources>

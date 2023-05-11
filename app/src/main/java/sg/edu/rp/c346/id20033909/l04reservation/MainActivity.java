@@ -58,9 +58,10 @@ public class MainActivity extends AppCompatActivity {
                     message += "Please provide a Mobile Number";
                 } else if (size.getText().toString().trim().length()==0){
                     message += "Please provide Group Size";
-                } else if (){
+                } else {
                     message += "Reservation Confirmed!";
                     displayTxt += "Name: " + name + "\nMobile: "+mobile+"\nGroup Size: "+size+"\nBooking Date: "+date+"\nTime Booked: "+hour+":"+min+"\nSmoking Area: "+boolSmoking+"\n\nPlease be Punctual!";
+                    display.setText(displayTxt);
 
                 }
                 Toast.makeText(MainActivity.this,message,Toast.LENGTH_LONG).show();

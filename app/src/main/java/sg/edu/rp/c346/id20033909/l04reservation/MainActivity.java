@@ -51,6 +51,7 @@ public class MainActivity extends AppCompatActivity {
                 int year = dp.getYear();
                 int month = dp.getMonth() + 1;
                 int day = dp.getDayOfMonth();
+                String date = day+"/"+month+"/"+year;
 
 
                 if (name.getText().toString().trim().length()==0){

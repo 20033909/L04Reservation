@@ -5,6 +5,7 @@ import androidx.appcompat.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
+import android.widget.CheckBox;
 import android.widget.DatePicker;
 import android.widget.EditText;
 import android.widget.RadioGroup;
@@ -18,7 +19,7 @@ public class MainActivity extends AppCompatActivity {
     EditText size;
     TimePicker tp;
     DatePicker dp;
-    RadioGroup radio;
+    CheckBox smokingArea;
     Button confirm;
     Button reset;
     TextView display;
@@ -37,7 +38,7 @@ public class MainActivity extends AppCompatActivity {
         tp = findViewById(R.id.timePicker);
         confirm = findViewById(R.id.confirm);
         reset = findViewById(R.id.reset);
-        radio = findViewById(R.id.radio);
+        smokingArea = findViewById(R.id.checkBox);
         display = findViewById(R.id.display);
 
         confirm.setOnClickListener(new View.OnClickListener() {
@@ -60,7 +61,7 @@ public class MainActivity extends AppCompatActivity {
                     message += "Please provide Group Size";
                 } else {
                     message += "Reservation Confirmed!";
-                    displayTxt += "Name: " + name + "\nMobile: "+mobile+"\nGroup Size: "+size+"\nBooking Date: "+date+"\nTime Booked: "+hour+":"+min+"\nSmoking Area: "+boolSmoking+"\n\nPlease be Punctual!";
+                    displayTxt += "Name: " + name + "\nMobile: "+mobile+"\nGroup Size: "+size+"\nBooking Date: "+date+"\nTime Booked: "+hour+":"+min+"\nSmoking Area Preferred: "+smokingArea.isChecked()+"\n\nPlease be Punctual!";
                     display.setText(displayTxt);
 
                 }
@@ -78,7 +79,7 @@ public class MainActivity extends AppCompatActivity {
                 name.setText("");
                 mobile.setText("");
                 size.setText("");
-                rbNonsmoke.setChecked(true);
+                smokingArea.setChecked(false);
                 display.setText("");
             }
         });
